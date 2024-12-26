@@ -1,0 +1,14 @@
+预先准备
+1.安装CMAKE，版本不低于3.10
+2.编写交叉编译配置
+例
+toolchain-aarch64-rk356x.cmake
+开始编译
+1.创建不同目标平台安装目录
+例
+mkdir build-aarch64-rockchip-linux-gnu
+2.cd安装目录并执行cmake
+cmake CMakelist路径 -DCMAKE_TOOLCHAIN_FILE=交叉编译配置路径
+例
+cmake .. -DCMAKE_TOOLCHAIN_FILE=../toolchain/toolchain.cmake
+3.make
